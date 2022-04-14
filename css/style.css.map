@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,+IAAI",
+    "sources": [
+        "../sass/style.scss",
+        "../sass/_general.scss",
+        "../sass/_var.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
