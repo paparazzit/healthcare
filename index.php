@@ -1,8 +1,12 @@
 <?php 
 require 'partials/header.php';
+require 'partials/navbar.php';
 ?>
 
-<h2>HELLO</h2>
+
+
+
+
 <?php 
 require 'partials/footer.php';
 ?>
