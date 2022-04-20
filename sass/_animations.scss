@@ -1,0 +1,12 @@
+@keyframes header_load {
+	0% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+	30% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+	}
+}

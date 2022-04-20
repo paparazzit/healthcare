@@ -1,2 +1,9 @@
-@import "_general";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
 @import "_var";
+@import "_mixins";
+@import "_animations";
+
+@import "_general";
+@import "_navbar";
+@import "_home";
+@import "_footer";

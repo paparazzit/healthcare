@@ -1,1 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-size: $fnt_size;
+	font-family: $fnt_main;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: $fnt_dark;
+}
+// BUTTONS
+
+.btn {
+	display: inline-block;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	padding: 0.8em 1.6em;
+	font-weight: 600;
+	letter-spacing: 1.4px;
+	&.btn_green {
+		background-color: $clr_green;
+		color: $fnt_white;
+	}
+}
+
+// CONTAINER
+
+.container {
+	width: 1756px;
+	max-width: 1756px;
+	min-width: 320px;
+	margin: 0 auto;
+
+	@media (max-width: 1756px) {
+		width: calc(1756px * 0.9);
+	}
+	@media (max-width: 1581px) {
+		width: calc(1581px * 0.9);
+	}
+	@media (max-width: 1423px) {
+		width: calc(1423px * 0.9);
+	}
+	@media (max-width: 1281px) {
+		width: calc(1281px * 0.9);
+	}
+	@media (max-width: 1153px) {
+		width: calc(1153px * 0.9);
+	}
+	@media (max-width: 1038px) {
+		width: calc(1038px * 0.9);
+	}
+	@media (max-width: 935px) {
+		width: calc(935px * 0.9);
+	}
+	@media (max-width: 841px) {
+		width: 100%;
+	}
+}
+
+// SECTION
+
+section {
+	padding: 100px 0;
+}
