@@ -1122,6 +1122,9 @@ section.our_brands .container .brand_cont article p span {
             flex: 0 0 80%;
     margin-bottom: 80px;
   }
+  section.our_brands .container .brand_cont article:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
   section.our_brands .container .brand_cont article .img_wrapper {
     width: unset;
   }
@@ -1137,6 +1140,10 @@ section.our_brands .container .brand_cont article p span {
   section.our_brands .container .brand_cont article .btn {
     margin-top: 40px;
   }
+}
+
+section.career {
+  padding-top: 0;
 }
 
 section.career .container article {
@@ -1241,6 +1248,80 @@ section.career .container article h2 {
 section.career .container article h2 span {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media (max-width: 1039px) {
+  section.career .container article {
+    padding: 0 5%;
+  }
+  section.career .container article .text_wrapper {
+    padding: 25px 35px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  section.career .container article h2 {
+    font-size: 3.5rem;
+    right: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  section.career .container article {
+    padding: 0 5%;
+    aspect-ratio: 1750 / 956;
+  }
+  section.career .container article .text_wrapper {
+    min-width: 450px;
+    max-width: 450px;
+  }
+  section.career .container article .text_wrapper p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  section.career .container article .text_wrapper p.bld {
+    font-weight: 500;
+  }
+  section.career .container article .text_wrapper .btn {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 620px) {
+  section.career .container article {
+    aspect-ratio: none;
+    height: 580px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 0 40px 0;
+  }
+  section.career .container article .text_wrapper {
+    position: relative;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    min-width: 280px;
+    max-width: unset;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+  }
+  section.career .container article h2 {
+    text-orientation: unset;
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 20px;
+    height: unset;
+  }
+  section.career .container article h2 span {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 footer {

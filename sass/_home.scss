@@ -515,6 +515,9 @@ section.our_brands {
 				article {
 					flex: 0 0 80%;
 					margin-bottom: 80px;
+					&:nth-last-of-type(1) {
+						margin-bottom: 0;
+					}
 					.img_wrapper {
 						width: unset;
 						img {
@@ -537,6 +540,7 @@ section.our_brands {
 }
 
 section.career {
+	padding-top: 0;
 	.container {
 		article {
 			padding: 7% 5%;
@@ -603,6 +607,72 @@ section.career {
 
 				span {
 					transform: rotate(180deg);
+				}
+			}
+		}
+
+		@media (max-width: 1039px) {
+			article {
+				padding: 0 5%;
+				.text_wrapper {
+					padding: 25px 35px;
+					align-self: center;
+				}
+				h2 {
+					font-size: 3.5rem;
+					right: 20px;
+				}
+			}
+		}
+
+		@media (max-width: 750px) {
+			article {
+				padding: 0 5%;
+				aspect-ratio: 1750 / 956;
+
+				.text_wrapper {
+					min-width: 450px;
+					max-width: 450px;
+					p {
+						text-align: left;
+						margin-bottom: 20px;
+						font-size: 0.9rem;
+						&.bld {
+							font-weight: 500;
+						}
+					}
+					.btn {
+						font-size: 0.85rem;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 620px) {
+			article {
+				aspect-ratio: none;
+				height: 580px;
+				justify-content: center;
+
+				padding: 0 0 40px 0;
+				.text_wrapper {
+					position: relative;
+					transform: translateY(50px);
+					min-width: 280px;
+					max-width: unset;
+					flex: 0 0 90%;
+				}
+				h2 {
+					text-orientation: unset;
+					writing-mode: unset;
+					width: 100%;
+					right: 0;
+					left: 0;
+					top: 20px;
+					height: unset;
+					span {
+						transform: rotate(0deg);
+					}
 				}
 			}
 		}
