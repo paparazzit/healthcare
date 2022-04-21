@@ -48,7 +48,6 @@ let card_content = document.querySelectorAll(".card_content");
 if (card_section) {
 	let card_height = 0;
 
-	console.log(card_content[0].offsetHeight);
 	window.addEventListener("load", set_cardSize);
 	window.addEventListener("resize", set_cardSize);
 }
@@ -58,4 +57,51 @@ function set_cardSize() {
 	let card_2 = card_content[1];
 
 	card_2.style.height = card_1.offsetHeight + "px";
+}
+
+// IN VIEW
+
+let ap_section = document.querySelectorAll(".in-view");
+
+let height;
+let width;
+
+window.addEventListener("load", () => {
+	setDefault();
+	start();
+});
+
+window.addEventListener("resize", () => {
+	setDefault();
+});
+
+function setDefault() {
+	height = window.innerHeight;
+	width = window.innerWidth;
+}
+
+function start() {
+	let sredine = [];
+	ap_section.forEach((section) => {
+		let thershold = section.getAttribute("data-threshold");
+
+		let item_h = section.offsetHeight;
+		let item_pos = section.offsetTop;
+		let show = item_pos - height * thershold + item_h;
+		sredine.push(show);
+	});
+	console.log(sredine);
+
+	window.addEventListener("scroll", () => {
+		ap_section.forEach((section, index) => {
+			if (sredine[index] < window.scrollY) {
+				section.classList.add("appear");
+			} else {
+				section.classList.remove("appear");
+			}
+			if (window.scrollY > section.offsetTop + section.offsetHeight * 0.8) {
+				section.classList.remove("appear");
+			}
+		});
+	});
 }

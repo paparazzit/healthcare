@@ -14,9 +14,9 @@ require 'partials/navbar.php';
         </hgroup>
     </div>
 </header>
-<section class="intro" id="intro">
+<section class="intro " id="intro"  >
     <div class="container">
-        <div class="intro_content">
+        <div class="intro_content in-view" data-threshold = '1.3'>
             <p><span>HealthCare Europe d.o.o.</span> was established in 2012 in Serbia as a daughter company of a Chinese
             memory foam production giant HealthCare Co. Ltd. Factory is placed in Ruma, Republic of Serbia,
             with more than 60.000 m² and supplies European markets, Russia, the Middle East, and the USA.
@@ -31,15 +31,14 @@ require 'partials/navbar.php';
         <!-- COUNTER -->
         <div class="counter_section">
             <div class="counter_wrapper">
-                <article>
-                    <h2>25</h2>
+                <article class="in-view" data-threshold = '1.1' >                    <h2>25</h2>
                     <p>Countries where we distribute our products.</p>
-                </article>
-                <article>
+                </article  >
+                <article  class="in-view" data-threshold = '0.98'>
                     <h2>700</h2>
                     <p>Employees in various sectors.</p>
                 </article>
-                <article>
+                <article   class="in-view" data-threshold = '0.95'>
                     <h2>3 000 000</h2>
                     <p>Finished mattresses.</p>
                 </article>
@@ -51,12 +50,12 @@ require 'partials/navbar.php';
  <!-- VIDEO PLAYER -->
 
  <div class="video_player_section">
-        <div class="video_player" id="video_player">
+        <div class="video_player in-view" id="video_player" data-threshold = '1.35'>
         <div class="img_wrapper">
             <img src="assets/home/video_ph.jpg" alt="">
         </div>
         </div>
-        <article class="info_wrapper">
+        <article class="info_wrapper ">
             <h2>Why should you do business with us?</h2>
             <div class="list">
                 <h3>We are innovative.</h3>
@@ -97,8 +96,8 @@ require 'partials/navbar.php';
 
 <!-- CARD SECTION -->
 
-    <div class="card_section" id="prod_tech">
-        <article class="card_1">
+    <div class="card_section " id="prod_tech" >
+        <article class="card_1 in-view"  data-threshold = '1.5'>
     
     <div class="card_text">
 
@@ -115,7 +114,7 @@ require 'partials/navbar.php';
        <a href="" class="btn btn_green">Learn More</a>
     </div>
         </article>
-        <article class="card_2">
+        <article class="card_2 in-view"  data-threshold = '1.5'>
         
         <div class="card_text">
 
@@ -137,7 +136,7 @@ require 'partials/navbar.php';
     </div>
 </section>
 
-<section class="our_brands" id="our_brands">
+<section class="our_brands " id="our_brands" >
     <div class="container">
       <h2 class="section_h">OUR BRANDS</h2>
       <hgroup>
@@ -146,7 +145,7 @@ require 'partials/navbar.php';
         </h2>
       </hgroup>
 
-      <div class="brand_cont">
+      <div class="brand_cont ">
           <article>
               <div class="img_wrapper">
                   <img src="assets/home/milly_logo.png" alt="">
@@ -167,9 +166,9 @@ require 'partials/navbar.php';
     </div>
 </section>
 
-<section class="career" id="career">
+<section class="career in-view" id="career" data-threshold = '1.60'>
     <div class="container">
-        <article>
+        <article class="">
             <img class="bg_img" src="assets/home/creer.jpg" alt="">
         <div class="text_wrapper">
             <p>A good team is a guarantee of success. Our team comprises more than 700 hardworking,

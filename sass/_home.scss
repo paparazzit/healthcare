@@ -84,6 +84,16 @@ section.intro {
 			max-width: 857px;
 			min-width: 300px;
 			margin: 0 auto 100px auto;
+
+			transform: translateY(-40%);
+			opacity: 0;
+			transition: 0.3s all ease-in-out;
+			&.appear {
+				transform: translateY(0);
+				opacity: 1;
+				transition: 0.5s all ease-in-out;
+			}
+
 			p {
 				line-height: 1.5;
 				margin-bottom: 1.5rem;
@@ -105,6 +115,14 @@ section.intro {
 				article {
 					flex: 1;
 					padding: 1.5rem 10px;
+					transform: translateY(45%);
+					opacity: 0;
+					transition: 0.3s all ease-in-out;
+					&.appear {
+						transform: translateY(0);
+						opacity: 1;
+						transition: 0.6s all ease-in-out;
+					}
 
 					text-align: center;
 					&:nth-last-of-type(2) {
@@ -130,10 +148,22 @@ section.intro {
 
 			.video_player {
 				flex: 0 0 60%;
+				overflow: hidden;
+				&.appear {
+					.img_wrapper {
+						transform: scale(1);
+						opacity: 1;
+						transition: 0.6s all ease-in-out;
+					}
+				}
 
 				.img_wrapper {
+					transform: scale(1.2);
+					opacity: 0;
+
 					width: 100%;
 					aspect-ratio: 1060 / 564;
+					transition: 0.2s all ease-in-out;
 					img {
 						display: block;
 						width: 100%;
@@ -182,21 +212,30 @@ section.intro {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				background-position: center;
+				background-size: center;
+				overflow: hidden;
+
 				&:nth-of-type(1) {
 					background-image: url(../assets/home/prod.jpg);
-					background-position: center;
-					background-size: cover;
 				}
 				&:nth-of-type(2) {
 					background-image: url(../assets/home/tech.jpg);
-					background-position: center;
-					background-size: cover;
+				}
+				&.appear {
+					.card_text {
+						opacity: 1;
+						transition: 0.5s all ease-in-out;
+						transform: translateY(0);
+					}
 				}
 
 				.card_text {
+					transform: translateY(30%);
 					height: 100%;
 					padding: 6% 8%;
-
+					opacity: 0;
+					transition: 0.2s all ease-in-out;
 					z-index: 3;
 					display: flex;
 					flex-direction: column;
@@ -541,6 +580,29 @@ section.our_brands {
 
 section.career {
 	padding-top: 0;
+	&.appear {
+		.container {
+			article {
+				img.bg_img {
+					opacity: 1;
+					transform: scale(1) translate(0, 0);
+					transition: 0.5s all ease-in-out;
+				}
+				.text_wrapper {
+					opacity: 1;
+					transform: translateX(0);
+					transition: 0.6s all ease-in-out;
+					transition-delay: 0.3s;
+				}
+				h2 {
+					transform: translateX(0);
+					opacity: 1;
+					transition: 0.6s all ease-in-out;
+					transition-delay: 0.5s;
+				}
+			}
+		}
+	}
 	.container {
 		article {
 			padding: 7% 5%;
@@ -556,6 +618,7 @@ section.career {
 			// background-size: cover;
 			// background-position: center;
 			img.bg_img {
+				transition: 0.2s all ease-in-out;
 				position: absolute;
 				width: 100%;
 				height: 100%;
@@ -564,6 +627,8 @@ section.career {
 				top: 0;
 				left: 0;
 				z-index: 0;
+				transform: scale(1.25) translate(-5%, 5%);
+				opacity: 0;
 			}
 			.text_wrapper {
 				align-self: flex-end;
@@ -575,6 +640,8 @@ section.career {
 				padding: 45px;
 				text-align: center;
 				border-radius: 10px;
+				transform: translateX(-30%);
+				opacity: 0;
 				p {
 					text-align: left;
 					margin-bottom: 20px;
@@ -585,6 +652,9 @@ section.career {
 			}
 
 			h2 {
+				transform: translateX(100%);
+				opacity: 0;
+				transition: 0.3s all ease-in-out;
 				position: absolute;
 				text-transform: uppercase;
 				right: 40px;
