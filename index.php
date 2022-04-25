@@ -31,15 +31,15 @@ require 'partials/navbar.php';
         <!-- COUNTER -->
         <div class="counter_section">
             <div class="counter_wrapper">
-                <article class="in-view" data-threshold = '1.1' >                    <h2>25</h2>
+                <article id="count_article_1" class="in-view" data-threshold = '1.1' >                    <h2 id="count-1">25</h2>
                     <p>Countries where we distribute our products.</p>
                 </article  >
-                <article  class="in-view" data-threshold = '0.98'>
-                    <h2>700</h2>
+                <article id="count_article_2" class="in-view" data-threshold = '0.98'>
+                    <h2 id="count-2">700</h2>
                     <p>Employees in various sectors.</p>
                 </article>
-                <article   class="in-view" data-threshold = '0.95'>
-                    <h2>3 000 000</h2>
+                <article id="count_article_3"   class="in-view" data-threshold = '0.95'>
+                    <h2 id="count-3">3 000 000</h2>
                     <p>Finished mattresses.</p>
                 </article>
             </div>

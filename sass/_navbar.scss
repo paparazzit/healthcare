@@ -4,7 +4,7 @@ nav.main_nav {
 	width: 100%;
 	top: 0;
 	z-index: 1010;
-	background-color: rgba($white, 0.7);
+	background-color: $white;
 	box-shadow: 0px 0 5px rgba($fnt_dark, 0.5);
 	.container {
 		display: flex;

@@ -71,3 +71,58 @@ a {
 section {
 	padding: 100px 0;
 }
+
+// PAGE HEADERS
+
+header.page_header {
+	margin-top: 60px;
+	height: 18vw;
+	min-height: 150px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		position: absolute;
+		transform: scale(1.2);
+		display: block;
+		width: 100%;
+		object-position: center;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		transition: 0.4s all ease-in-out;
+		opacity: 0.2;
+	}
+	h2 {
+		position: relative;
+		z-index: 1010;
+		text-transform: uppercase;
+		color: $fnt_white;
+		@include fluid-type(500px, 1920px, 50px, 110px);
+		opacity: 0;
+		transition: 0.4s all ease-in-out;
+		transition-delay: 0.3s;
+	}
+	&.show_header {
+		img {
+			transform: scale(1);
+			opacity: 1;
+		}
+		h2 {
+			opacity: 1;
+		}
+	}
+
+	@media (max-width: 560px) {
+		margin-top: 53px;
+		background: black;
+		img {
+			opacity: 0.75;
+		}
+		h2 {
+			font-size: 2.8rem;
+		}
+	}
+}

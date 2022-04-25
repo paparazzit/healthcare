@@ -22,7 +22,7 @@
                     <a href="index.php">HOME</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">PRODUCTS</a>
+                    <a href="products.php">PRODUCTS</a>
 
                     <a href="index.php" class="subLink" >OUR BRENDS</a>
                 </div>

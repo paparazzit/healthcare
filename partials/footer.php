@@ -113,6 +113,7 @@
 
 </footer>
 
+<script src="js/countUp.js" ></script>
 <script src="js/main.js"></script>
 
 </body>
