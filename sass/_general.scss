@@ -97,7 +97,7 @@ header.page_header {
 	}
 	h2 {
 		position: relative;
-		z-index: 1010;
+		z-index: 2;
 		text-transform: uppercase;
 		color: $fnt_white;
 		@include fluid-type(500px, 1920px, 50px, 110px);

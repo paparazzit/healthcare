@@ -1,10 +1,16 @@
 // import { CountUp } from "../node_modules/countup.js/dist/countUp.min";
 
 // LOADING AND RESIZING
+let he = 0;
 window.addEventListener("load", () => {
 	if (card_section) {
 		let card_height = 0;
 		set_cardSize();
+	}
+	if (window.innerWidth > 1040) {
+		if (main_articles.length > 0) {
+			main_article_resize();
+		}
 	}
 });
 
@@ -12,6 +18,13 @@ window.addEventListener("resize", () => {
 	if (card_section) {
 		let card_height = 0;
 		set_cardSize();
+	}
+	if (window.innerWidth > 1040) {
+		if (main_articles.length > 0) {
+			main_article_resize();
+		}
+	} else {
+		main_article_remove_Style();
 	}
 });
 
@@ -180,25 +193,45 @@ function start() {
 // PRODUCTS
 let main_articles = document.querySelectorAll("article.main_article");
 
-if (main_articles.length > 0) {
-	main_articles.forEach((article) => {});
-}
-// ACCORDIAN
+let max_artic_h = 0;
+let text_content = [];
+function main_article_resize() {
+	text_content = [];
 
-let accordion_btns = document.querySelectorAll(".accordion_btn");
-if (accordion_btns.length > 0) {
-	accordion_btns.forEach((btn) => {
-		btn.addEventListener("click", show_accordion);
+	main_articles.forEach((art) => {
+		let text = art.children[1].scrollHeight;
+		text_content.push(text);
+	});
+	max_artic_h = Math.max(...text_content);
+	main_articles.forEach((art) => {
+		art.style.height = 100 + max_artic_h + "px";
+	});
+}
+
+function main_article_remove_Style() {
+	main_articles.forEach((art) => {
+		art.removeAttribute("style");
+	});
+}
+
+// ACCORDIAN
+let accordions = document.querySelectorAll("article.accordion");
+if (accordions.length > 0) {
+	accordions.forEach((accord) => {
+		accord.addEventListener("click", show_accordion);
 	});
 }
 
 function show_accordion() {
-	let parent = this.parentElement.nextElementSibling;
+	let children_all = this.children;
+	let arrow = children_all[0].children[1];
+	let content = children_all[1];
+	console.log(content);
 	if (this.classList.contains("active")) {
 		this.classList.remove("active");
-		parent.style.maxHeight = 0 + "px";
+		content.style.maxHeight = 0 + "px";
 	} else {
-		parent.style.maxHeight = parent.scrollHeight + "px";
+		content.style.maxHeight = content.scrollHeight + "px";
 		this.classList.add("active");
 	}
 }

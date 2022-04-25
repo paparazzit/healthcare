@@ -236,6 +236,49 @@ require 'partials/navbar.php';
 </div>
 </section>
 
+
+
+<section class="our_brands container">
+   <hgroup class="brand_hg">
+       <h2>OurBrands</h2>
+       <p>Our factory manufactures sleep-related items for our two brands - MLILY® and ESSENCE SLEEP®. For
+        more information about their assortment and specifications, please look:</p>
+        <a href="" class="btn btn_green">LEARN MORE</a>
+   </hgroup>
+   <div class="wrapper">
+       <article class="left">
+           <div class="img_wrapper">
+               <img src="assets/home/milly_logo.png" alt="">
+           </div>
+           <a href="#" class="btn btn_green">DOWNLOAD MLILYⓇ CATALOGUE</a>
+       </article>
+       <article class="left">
+           <div class="img_wrapper">
+               <img src="assets/home/essence_logo.png" alt="">
+           </div>
+           <a href="#" class="btn btn_green">DOWNLOAD ESSENCE SLEEPⓇ CATALOGUE</a>
+       </article>
+   </div>
+</section>
+
+
+<section class="prod_career container">
+    <article>
+        <img src="assets/products/career.jpg" alt="" class="bg_img">
+        <div class="text-wrapper">
+        <p>A good team is a guarantee of success. Our team comprises more than 700 hardworking,
+        professional workers divided into well-organized work units – departments led by top experts.</p>
+            <p class="bld">
+            Are you ready and willing to be the best at what you do?
+            Are you hardworking, dependable, and a team player?
+            Are you interested in becoming part of our team?
+            Take a look at our current open positions and apply now in just a few simple clicks.
+            </p>
+            <a href="" class="btn btn_green">Apply Now</a>
+        </div>
+    </article>
+    
+</section>
 <?php 
 require 'partials/footer.php';
 ?>

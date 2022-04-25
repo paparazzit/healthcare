@@ -160,7 +160,7 @@ header.page_header img {
 
 header.page_header h2 {
   position: relative;
-  z-index: 1010;
+  z-index: 2;
   text-transform: uppercase;
   color: #ffffff;
   opacity: 0;
@@ -1618,6 +1618,10 @@ section.product_info .container .buttons a:not(.btn) {
   }
 }
 
+section.products {
+  padding-top: 0px;
+}
+
 section.products .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1632,13 +1636,29 @@ section.products .container {
 
 section.products .container .product_wrapper {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 28%;
-          flex: 0 0 28%;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
   padding: 0 20px;
 }
 
+section.products .container .product_wrapper .product_img {
+  height: 270px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+section.products .container .product_wrapper .product_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 section.products .container .product_wrapper h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: inline-block;
 }
 
@@ -1680,6 +1700,11 @@ section.products .container .product_wrapper article.accordion {
   transition: 0.4s all ease-in-out;
 }
 
+section.products .container .product_wrapper article.accordion.active .prod_h img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 section.products .container .product_wrapper article.accordion .prod_h {
   width: 100%;
   position: relative;
@@ -1691,16 +1716,11 @@ section.products .container .product_wrapper article.accordion .prod_h img {
   position: absolute;
   right: 0;
   top: 7px;
-  z-index: 1010;
+  z-index: 2;
   -webkit-transition: 0.3s -webkit-transform ease-in-out;
   transition: 0.3s -webkit-transform ease-in-out;
   transition: 0.3s transform ease-in-out;
   transition: 0.3s transform ease-in-out, 0.3s -webkit-transform ease-in-out;
-}
-
-section.products .container .product_wrapper article.accordion .prod_h img.active {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 
 section.products .container .product_wrapper article.accordion .prod_info {
@@ -1712,6 +1732,195 @@ section.products .container .product_wrapper article.accordion .prod_info {
 
 section.products .container .product_wrapper article.accordion .prod_info p {
   margin-bottom: 25px;
+}
+
+@media (max-width: 1040px) {
+  section.products .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.products .container .product_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    margin-bottom: 40px;
+    min-width: 430px;
+  }
+}
+
+@media (max-width: 450px) {
+  section.products .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.products .container .product_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    margin-bottom: 40px;
+    min-width: 310px;
+  }
+  section.products .container .product_wrapper article.accordion .prod_h h2 {
+    font-size: 1rem;
+  }
+  section.products .container .product_wrapper article.accordion .prod_h img {
+    width: 20px;
+    top: 35px;
+  }
+  section.products .container .product_wrapper article.accordion p {
+    font-size: 0.95rem;
+  }
+}
+
+section.our_brands {
+  padding-top: 0;
+}
+
+section.our_brands .brand_hg {
+  text-align: center;
+}
+
+section.our_brands .brand_hg h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+section.our_brands .brand_hg h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 82px;
+  background-color: #166e39;
+  margin: 25px 0;
+  margin: 25px auto;
+}
+
+section.our_brands .brand_hg p {
+  width: 60%;
+  min-width: 811px;
+  margin: 0 auto 30px auto;
+}
+
+section.our_brands .btn {
+  width: 318px;
+  text-align: center;
+}
+
+section.our_brands .wrapper {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section.our_brands .wrapper article {
+  text-align: center;
+}
+
+section.our_brands .wrapper article .btn {
+  margin-top: 55px;
+}
+
+@media (max-width: 850px) {
+  section.our_brands .btn {
+    width: 280px;
+    text-align: center;
+  }
+  section.our_brands .brand_hg p {
+    width: 80%;
+    min-width: 300px;
+    max-width: 550px;
+  }
+  section.our_brands .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.our_brands .wrapper article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    margin-bottom: 65px;
+  }
+  section.our_brands .wrapper article .img_wrapper img {
+    display: block;
+    width: 100%;
+  }
+  section.our_brands .wrapper article .btn {
+    margin-top: 35px;
+  }
+}
+
+section.prod_career article {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  padding: 55px;
+}
+
+section.prod_career article .bg_img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+section.prod_career article .text-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 48px 44px 40px 49px;
+  max-width: 567px;
+  border-radius: 10px;
+}
+
+section.prod_career article .text-wrapper p.bld {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+section.prod_career article .text-wrapper .btn {
+  display: block;
+  margin: 40px auto 0 auto;
+  width: 230px;
+  text-align: center;
+}
+
+@media (max-width: 940px) {
+  section.prod_career article {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.prod_career article .bg_img {
+    height: 100%;
+  }
+  section.prod_career article .text-wrapper {
+    max-width: unset;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 95%;
+            flex: 0 0 95%;
+  }
 }
 
 footer {
