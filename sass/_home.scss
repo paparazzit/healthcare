@@ -213,7 +213,8 @@ section.intro {
 				align-items: center;
 				justify-content: center;
 				background-position: center;
-				background-size: center;
+				background-size: cover;
+				background-repeat: no-repeat;
 				overflow: hidden;
 
 				&:nth-of-type(1) {

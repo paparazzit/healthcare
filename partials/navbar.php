@@ -27,7 +27,7 @@
                     <a href="index.php" class="subLink" >OUR BRENDS</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">TECHNOLOGY</a>
+                    <a href="technology.php">TECHNOLOGY</a>
                     <a href="index.php" class="subLink" >INNOVATIONS</a>
                 </div>
                 <div class="link">

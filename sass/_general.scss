@@ -35,13 +35,13 @@ a {
 // CONTAINER
 
 .container {
-	width: 1756px;
-	max-width: 1756px;
+	width: 1740px;
+	max-width: 1740px;
 	min-width: 320px;
 	margin: 0 auto;
 
-	@media (max-width: 1756px) {
-		width: calc(1756px * 0.9);
+	@media (max-width: 1740px) {
+		width: calc(1740px * 0.9);
 	}
 	@media (max-width: 1581px) {
 		width: calc(1581px * 0.9);
@@ -125,4 +125,9 @@ header.page_header {
 			font-size: 2.8rem;
 		}
 	}
+}
+
+.list-content {
+	list-style-position: outside;
+	list-style: disc;
 }

@@ -105,7 +105,6 @@ section.products {
 			}
 			h2 {
 				font-size: 1.1rem;
-				@include underline(80px, 25px);
 			}
 			article {
 				margin-bottom: 30px;
@@ -133,7 +132,9 @@ section.products {
 					.prod_h {
 						width: 100%;
 						position: relative;
-
+						h2 {
+							user-select: none;
+						}
 						img {
 							cursor: pointer;
 							width: 22px;
@@ -145,11 +146,22 @@ section.products {
 						}
 					}
 					.prod_info {
+						// margin-top: 22px;
 						overflow: hidden;
 						max-height: 0;
 						transition: 0.4s all ease;
+						&::before {
+							margin-top: 22px;
+							margin-bottom: 22px;
+							content: "";
+							width: 82px;
+							height: 2px;
+							background-color: $clr_green;
+							display: block;
+						}
 						p {
 							margin-bottom: 25px;
+							user-select: none;
 						}
 					}
 				}
