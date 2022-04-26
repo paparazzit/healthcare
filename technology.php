@@ -251,6 +251,92 @@ require 'partials/navbar.php';
     </div>
 </section>
 
+<section class="suppliers container">
+    <div class="wrapper">
+    <div class="sec_1">
+        <p>Interested to read more of our offer? Read all about the technical details of the foams we produce
+        on the left. Get the comprehensive pricelist of the foams on the right link.</p>
+        <div class="btns">
+        <a href="" class="btn btn_green">FOAMS WE PRODUCE</a>
+        <a href="" class="btn btn_green">FOAMS PRICELIST</a>
+        </div>
+    </div>
+    <div class="sec_2">
+        <p>Read more about our innovative foams - AirCell® and Smart foamTM - on the following link.</p>
+        <a href="" class="btn btn_green">LEARN MORE</a>
+    </div>
+    <div class="sec_3">
+        <h2>Our suppliers</h2>
+        <div class="text-content">
+            <p>Healthcare Europe is focused on the procurement of raw materials 
+                from European manufacturers, which allows us :</p>
+                <ul class="list-content">
+                    <li>To conduct continuous quality control.</li>
+                 <li>   To offer short delivery times and flexibility.</li>
+                    <li>To ensure the European origin of finished products.</li>
+                </ul>
+                <p>Our main suppliers of foam production materials are DOW, Covestro, BASF, Repsol, Evonik, etc.
+                The primary suppliers of fabrics/textile are well-known European companies: BEKAERT DESLEE,
+                COMFYTEX, KIRAYTEX, and many others.</p>
+        </div>
+    </div>
+
+    <div class="sec_4">
+        <h2>Our certificates</h2>
+        <div class="text-content">
+            <p>
+            For our business to be successful, we must consider that our products are safe for users and show respect and care for our employees. This is also demonstrated by our numerous certificates, which prove that we strictly adhere to the highest international regulations and parameters and manage our business and organization of working conditions accordingly.
+                </p><p>
+            Since its inception, the company has been certified and operates in accordance with the requirements of <span>Standard Quality Management</span>  – ISO 9001: 2015, constantly working to improve its processes following the dynamic internal and external environment of the business.
+            </p><p>
+            HealthCare Europe d.o.o. carries two <span>OEKO-TEX®</span>. The certificate numbered 25.3.0154 guarantees that the PU, whether shaped or molded into a block, is safe for our consumer’s health and environment. On the other hand, the OEKO-TEX® 25.3.0155 certificate is proof that our final products are free of harmful substances and durable, meeting the highest environmental and market standards.
+            </p><p>
+            Since February of 2017, HealthCare Europe d.o.o. has carried the right to the <span>CertiPur®</span> certification. Numbered C-SRB-1216-987-0325, it guarantees our buyers that our foams, which we incorporate into the final products, meet the consumption criteria and requirements set by the CertiPur® Safety Health Environment standards.
+            </p><p>
+            During the same year, we were granted the <span>BSCI</span> certification under the number 355547/79668. It expresses high-social responsibility and awareness that HealthCare Europe d.o.o. shows towards its employees and the wider community
+            </p>
+        </div>
+    </div>
+    
+    </div>
+    <div class="certificates">
+        <div class="img-wrapper">
+            <img src="assets/logos/cert_1.png" alt="">
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/logos/cert_2.png" alt="">
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/logos/cert_3.png" alt="">
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/logos/cert_4.png" alt="">
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/logos/cert_5.png" alt="">
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/logos/cert_6.png" alt="">
+        </div>
+        
+    </div>
+    <article class="jumbo">
+        <div class="text-content">
+        <p>A good team is a guarantee of success. Our team comprises more than 700 hardworking,
+        professional workers divided into well-organized work units – departments led by top experts.</p>
+
+       <p> Are you ready and willing to be the best at what you do?
+        Are you hardworking, dependable, and a team player?
+        Are you interested in becoming part of our team?
+        Take a look at our current open positions and apply now in just a few simple clicks.</p>
+        <a href="" class="btn btn_green">Apply Now</a>
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/technology/jumbo_2.jpg" alt="">
+        </div>
+    </article>
+</section>
+
 <?php 
 require 'partials/footer.php';
 ?>
