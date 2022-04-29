@@ -2,7 +2,11 @@
 
 // LOADING AND RESIZING
 let he = 0;
+let sredine = [];
+
 window.addEventListener("load", () => {
+	setDefault();
+	start();
 	if (card_section) {
 		let card_height = 0;
 		set_cardSize();
@@ -15,6 +19,8 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", () => {
+	setDefault();
+
 	if (card_section) {
 		let card_height = 0;
 		set_cardSize();
@@ -27,6 +33,13 @@ window.addEventListener("resize", () => {
 		main_article_remove_Style();
 	}
 });
+// LOADER
+function loader_anim() {
+	loader.classList.add("hide");
+	setTimeout(function () {
+		loader.classList.add("remove");
+	}, 400);
+}
 
 // NAVBAR
 
@@ -125,69 +138,52 @@ const count_1 = new CountUp("count-1", 25, cont_1_opt);
 const count_2 = new CountUp("count-2", 700, cont_2_opt);
 const count_3 = new CountUp("count-3", 3000000, cont_3_opt);
 
-window.addEventListener("load", () => {
-	setDefault();
-	start();
-});
-
-window.addEventListener("resize", () => {
-	setDefault();
-});
-
 function setDefault() {
 	height = window.innerHeight;
 	width = window.innerWidth;
 }
 
 function start() {
-	let sredine = [];
-	ap_section.forEach((section) => {
-		let thershold = section.getAttribute("data-threshold");
+	if (page_header) {
+		page_header.classList.add("show_header");
+	}
+}
 
-		let item_h = section.offsetHeight;
-		let item_pos = section.offsetTop;
-		let show = item_pos - height * thershold + item_h;
-		sredine.push(show);
-	});
+// OBSERVER
 
-	window.addEventListener("scroll", () => {
-		ap_section.forEach((section, index) => {
-			if (sredine[index] < window.scrollY) {
-				section.classList.add("appear");
-			} else {
-				section.classList.remove("appear");
-			}
-			if (window.scrollY > section.offsetTop + section.offsetHeight * 0.8) {
-				section.classList.remove("appear");
-			}
-		});
-		if (!cont_article_1 && !cont_article_2 && !cont_article_3) {
+let obs_options = {
+	root: null,
+	rootMargin: "-120px -50px",
+	threshold: 0.05,
+};
+const observer = new IntersectionObserver(inView, obs_options);
+ap_section.forEach((section) => {
+	observer.observe(section);
+});
+function inView(entries, observer) {
+	entries.forEach((entry) => {
+		if (!entry.isIntersecting) {
+			entry.target.classList.remove("appear");
 			return;
 		}
-		if (cont_article_1.classList.contains("appear")) {
+		entry.target.classList.add("appear");
+		if (entry.target.classList.contains("counter_sec")) {
 			if (!count_1.error) {
 				count_1.start();
 			}
-		}
-		if (cont_article_2.classList.contains("appear")) {
 			if (!count_2.error) {
 				setTimeout(() => {
 					count_2.start();
 				}, 300);
 			}
-		}
-
-		if (cont_article_3.classList.contains("appear")) {
 			if (!count_3.error) {
 				setTimeout(() => {
 					count_3.start();
 				}, 500);
 			}
+			observer.unobserve(entry.target);
 		}
 	});
-	if (page_header) {
-		page_header.classList.add("show_header");
-	}
 }
 
 // PRODUCTS
@@ -226,12 +222,56 @@ function show_accordion() {
 	let children_all = this.children;
 	let arrow = children_all[0].children[1];
 	let content = children_all[1];
-	console.log(content);
+
 	if (this.classList.contains("active")) {
 		this.classList.remove("active");
 		content.style.maxHeight = 0 + "px";
 	} else {
 		content.style.maxHeight = content.scrollHeight + "px";
 		this.classList.add("active");
+	}
+}
+
+// PRIVACY POLICY DROP DOWN
+
+let privacy_btns = document.querySelectorAll("article .pp_h");
+let pp_articles = document.querySelectorAll("section.privacy article");
+
+if (privacy_btns) {
+	privacy_btns.forEach((pp_btn) => {
+		pp_btn.addEventListener("click", show_pp);
+	});
+	pp_articles.forEach((art) => {
+		art.setAttribute("data-cont", 0);
+	});
+}
+let cont = 0;
+function show_pp() {
+	pp_articles.forEach((art) => {
+		art.classList.remove("active");
+		art.children[1].style.maxHeight = 0 + "px";
+	});
+
+	pp_activate(this.parentElement);
+}
+
+function pp_activate(item) {
+	if (item.classList.contains("active")) {
+		item.classList.remove("active");
+	} else {
+		if (item.getAttribute("data-cont") == 0) {
+			item.classList.add("active");
+			item.children[1].style.maxHeight = item.children[1].scrollHeight + "px";
+
+			pp_articles.forEach((art) => {
+				art.setAttribute("data-cont", 0);
+			});
+			cont = 1;
+			item.setAttribute("data-cont", cont);
+		} else {
+			item.setAttribute("data-cont", 0);
+			item.children[1].style.maxHeight = 0 + "px";
+			cont = 0;
+		}
 	}
 }

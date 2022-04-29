@@ -73,7 +73,7 @@
             </form>
         </article>
         <article>
-            <a href="#">We respect your privacy! <span>Privacy Policy</span></a>
+            <a href="privacy_policy.php">We respect your privacy! <span>Privacy Policy</span></a>
         </article>
     </div>
 
@@ -114,6 +114,7 @@
 </footer>
 
 <script src="js/countUp.js" ></script>
+<script src="js/formValidation.js"></script>
 <script src="js/main.js"></script>
 
 </body>

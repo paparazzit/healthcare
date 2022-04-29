@@ -42,7 +42,7 @@ require 'partials/navbar.php';
 <!-- LABORATORY -->
 
 <section class="laboratory container">
-    <article class="lab_intro">
+    <article class="lab_intro in-view" data-threshold="1.5">
         <h2>Our laboratory</h2>
         <p>Our high-end laboratory is an inevitable part of producing PU foams of the highest quality.
         Besides exact measuring, examinations, and mixing components, our lab also runs numerous tests that guarantee our polyurethane foams’ quality, durability, and technical characteristics. Our
@@ -73,7 +73,7 @@ require 'partials/navbar.php';
     <div class="container">
 
     <!-- TECH1 -->
-        <article>
+        <article class="in-view" data-threshold="1.85">
             <h2>Design and concept</h2>
             <div class="text-content">
                 <p>From the moment you decide to work with us, our design and development team will be available to you every step of the way. If it is all about creating and designing a completely new product according to your fixed criteria or those our experts made for you, rest assured that you will get the best offer for your investment.</p>
@@ -83,11 +83,11 @@ require 'partials/navbar.php';
             </div>
         </article>
     <!-- TECH 2 -->
-        <article>
+        <article class="in-view" data-threshold="1.85">
             <h2>Cutting and molding</h2>
             <div class="text-content">
                 <p>After regular and memory foam blocks foaming on a 250 m long line, the block will be cut and shaped through the most advanced machines. We own 7 CNC machines for long blocks cutting and further cutting preparation, 6 CNC machines for 3D short blocks cutting in different 3D/contour shapes, 3 Carousell machines for high–efficiency cutting of flat foam plates, 2 vertical cut machines, 2 profiling
-                machines (for multi-zoned mattresses and toppers), 3 crushing machines with rollers for cell structure
+                machines (for multi-zoned mattresses and toppers), 30 crushing machines with rollers for cell structure
                 opening, 2 machines for foam perforation, and 1 peeling for cutting of foam foil rolls.
                 </p><p>
                 Gluing line, as an integral part of the foam cutting line, has been used to complete cores production for final products.
@@ -96,7 +96,7 @@ require 'partials/navbar.php';
             </div>
         </article>
 
-        <article>
+        <article class="in-view" data-threshold="1.85">
             <h2>Design and concept</h2>
             <div class="text-content">
                 <p>
@@ -122,7 +122,7 @@ require 'partials/navbar.php';
             </div>
         </article>
 
-        <article>
+        <article class="in-view" data-threshold="1.85">
             <h2>Mold pillows forming</h2>
             <div class="text-content">
                 <p>
@@ -147,7 +147,7 @@ require 'partials/navbar.php';
             </div>
         </article>
 
-        <article>
+        <article class="in-view" data-threshold="1.85">
             <h2>Tailoring and sewing</h2>
             <div class="text-content">
                 <p>
@@ -165,7 +165,7 @@ require 'partials/navbar.php';
             </div>
         </article>
 
-        <article>
+        <article class="in-view" data-threshold="1.85">
             <h2>Packaging and warehouse</h2>
             <div class="text-content">
                 <p>The final products packaging process is done through two primary lines – the mattress/toppers packaging line and the pillow packaging line. You can choose or deliver packaging material yourself, or we can get it for you in the dimensions, design, and shape you desire.
@@ -299,23 +299,23 @@ require 'partials/navbar.php';
     </div>
     
     </div>
-    <div class="certificates">
-        <div class="img-wrapper">
-            <img src="assets/logos/cert_1.png" alt="">
+    <div class="certificates" >
+        <div class="img-wrapper in-view" >
+            <img src="assets/logos/cert_1.png" alt="" >
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper in-view" >
             <img src="assets/logos/cert_2.png" alt="">
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper in-view" >
             <img src="assets/logos/cert_3.png" alt="">
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper in-view" >
             <img src="assets/logos/cert_4.png" alt="">
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper in-view" >
             <img src="assets/logos/cert_5.png" alt="">
         </div>
-        <div class="img-wrapper">
+        <div class="img-wrapper in-view" >
             <img src="assets/logos/cert_6.png" alt="">
         </div>
         

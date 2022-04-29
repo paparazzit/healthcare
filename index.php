@@ -31,14 +31,14 @@ require 'partials/navbar.php';
         <!-- COUNTER -->
         <div class="counter_section">
             <div class="counter_wrapper">
-                <article id="count_article_1" class="in-view" data-threshold = '1.1' >                    <h2 id="count-1">25</h2>
+                <article id="count_article_1" class="in-view counter_sec" data-threshold = '1.1' >                    <h2 id="count-1">25</h2>
                     <p>Countries where we distribute our products.</p>
                 </article  >
-                <article id="count_article_2" class="in-view" data-threshold = '0.98'>
+                <article id="count_article_2" class="in-view counter_sec" data-threshold = '0.98'>
                     <h2 id="count-2">700</h2>
                     <p>Employees in various sectors.</p>
                 </article>
-                <article id="count_article_3"   class="in-view" data-threshold = '0.95'>
+                <article id="count_article_3"   class="in-view counter_sec" data-threshold = '0.95'>
                     <h2 id="count-3">3 000 000</h2>
                     <p>Finished mattresses.</p>
                 </article>
@@ -49,10 +49,14 @@ require 'partials/navbar.php';
 
  <!-- VIDEO PLAYER -->
 
- <div class="video_player_section">
-        <div class="video_player in-view" id="video_player" data-threshold = '1.35'>
+ <div class="video_player_section"> 
+        <div class="video_player in-view" id="video_player" data-src = "https://player.vimeo.com/video/704103784?h=e256d4ee60&autoplay=1" >
         <div class="img_wrapper">
             <img src="assets/home/video_ph.jpg" alt="">
+        </div>
+        <div class="play_btn" id="play_btn">
+            <img src="assets/icons/play_btn.png" alt="">
+            <img src="assets/home/video_ph.jpg" alt="" class="blur_bg">
         </div>
         </div>
         <article class="info_wrapper ">
@@ -137,8 +141,10 @@ require 'partials/navbar.php';
 </section>
 
 <section class="our_brands " id="our_brands" >
+<div class="h_wrapper"><h2 class="section_h">OUR BRANDS</h2></div>
     <div class="container">
-      <h2 class="section_h">OUR BRANDS</h2>
+       
+      
       <hgroup>
           <h2>Meet Our Brands <br>
             Our factory manufactures sleep-related items for our two brands - MLILY® and ESSENCE SLEEP®.
@@ -188,7 +194,13 @@ require 'partials/navbar.php';
     </div>
 </section>
 
+<div class="video_popUp" id="video_popUp">
+    <div class="video_wrapper">
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+</div>
 
+<script src="js/video_player.js"></script>
 <?php 
 require 'partials/footer.php';
 ?>

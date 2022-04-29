@@ -16,7 +16,7 @@
     </div>
     <div class="drop_down">
         <div class="drop_cont">
-            <a href="" class="logo"><img src="assets/home/healtCare_logo_mob.svg" alt=""></a>
+            <a href="index.php" class="logo"><img src="assets/home/healtCare_logo_mob.svg" alt=""></a>
             <div class="nav_links">
                 <div class="link">
                     <a href="index.php">HOME</a>
@@ -24,14 +24,14 @@
                 <div class="link">
                     <a href="products.php">PRODUCTS</a>
 
-                    <a href="index.php" class="subLink" >OUR BRENDS</a>
+                    <a href="brands.php" class="subLink" >OUR BRENDS</a>
                 </div>
                 <div class="link">
                     <a href="technology.php">TECHNOLOGY</a>
-                    <a href="index.php" class="subLink" >INNOVATIONS</a>
+                    <a href="innovations.php" class="subLink" >INNOVATIONS</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">CAREER</a>
+                    <a href="career.php">CAREER</a>
                 </div>
                 <div class="link">
                     <a href="index.php">ABOUT US</a>
@@ -43,7 +43,7 @@
                     <a href="index.php">NEWS</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">PRIVACY POLICY</a>
+                    <a href="privacy_policy.php">PRIVACY POLICY</a>
                 </div>
             </div>
 

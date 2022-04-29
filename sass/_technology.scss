@@ -95,6 +95,9 @@ section.laboratory {
 		max-width: 780px;
 		margin: 0 auto;
 		min-width: 300px;
+		opacity: 0;
+		transition: 0.4s all ease-in-out;
+		border: 1px solid red;
 		h2,
 		p {
 			text-align: center;
@@ -110,13 +113,17 @@ section.laboratory {
 			margin-bottom: 30px;
 		}
 		ul {
-			width: 80%;
+			width: 75%;
 			margin: 0 auto;
 			list-style-position: outside;
 			list-style-type: disc;
+
 			li {
 				margin-bottom: 3px;
 			}
+		}
+		&.appear {
+			opacity: 1;
 		}
 	}
 	.img-wrapper {
@@ -150,6 +157,7 @@ section.manu_tech {
 
 	.tech_hg {
 		text-align: center;
+		overflow: hidden;
 		h2 {
 			@include fluid-type(320px, 1920px, 18px, 48px);
 			text-transform: uppercase;
@@ -195,11 +203,19 @@ section.manu_tech {
 		flex-wrap: wrap;
 
 		article {
+			position: relative;
+			transform: translateY(20%);
 			flex: 0 0 29%;
 			margin-bottom: 40px;
 			padding: 35px;
 			background-color: $clr_bg_lgt;
 			border-radius: 10px;
+			transition: 0.3s all ease-in-out;
+			opacity: 0;
+			&.appear {
+				opacity: 1;
+				transform: translateY(-0%);
+			}
 			h2 {
 				font-size: 1.2rem;
 				@include underline(124px, 22px);
@@ -258,6 +274,7 @@ section.manu_tech {
 
 section.materials {
 	padding-top: 50px;
+	padding-bottom: 50px;
 	.material_hg {
 		text-align: center;
 		h2 {
@@ -280,7 +297,7 @@ section.materials {
 	.article_wrapper {
 		width: 80%;
 		max-width: 1350px;
-		margin: 50px auto;
+		margin: 50px auto 20px auto;
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-evenly;
@@ -350,6 +367,7 @@ section.materials {
 }
 
 section.suppliers {
+	padding-top: 50px;
 	.wrapper {
 		width: 80%;
 		margin: 0 auto;
@@ -443,7 +461,17 @@ section.suppliers {
 		align-items: center;
 		justify-content: space-around;
 		flex-wrap: wrap;
+		overflow: hidden;
+
 		.img-wrapper {
+			&.appear {
+				img {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -453,8 +481,42 @@ section.suppliers {
 			}
 
 			img {
+				position: relative;
+				transform: translateY(150%);
 				display: block;
 				width: 160px;
+				transition: 0.4s all ease-in-out;
+				opacity: 0.3;
+			}
+			&:nth-of-type(2) {
+				img {
+					transition-delay: 0.1s;
+				}
+			}
+			&:nth-of-type(2) {
+				img {
+					transition-delay: 0.15s;
+				}
+			}
+			&:nth-of-type(3) {
+				img {
+					transition-delay: 0.2s;
+				}
+			}
+			&:nth-of-type(4) {
+				img {
+					transition-delay: 0.25s;
+				}
+			}
+			&:nth-of-type(5) {
+				img {
+					transition-delay: 0.3s;
+				}
+			}
+			&:nth-of-type(6) {
+				img {
+					transition-delay: 0.35s;
+				}
 			}
 		}
 	}
