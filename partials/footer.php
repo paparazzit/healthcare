@@ -112,7 +112,7 @@
 </div>
 
 </footer>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/countUp.js" ></script>
 <script src="js/formValidation.js"></script>
 <script src="js/main.js"></script>

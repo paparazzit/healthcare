@@ -80,25 +80,30 @@ header.home_header {
 section.intro {
 	.container {
 		.intro_content {
-			width: 80%;
-			max-width: 857px;
-			min-width: 300px;
-			margin: 0 auto 100px auto;
-
-			transform: translateY(-40%);
-			opacity: 0;
-			transition: 0.3s all ease-in-out;
+			overflow: hidden;
 			&.appear {
-				transform: translateY(0);
-				opacity: 1;
-				transition: 0.5s all ease-in-out;
+				.intro_wrapper {
+					transform: translateY(0);
+					opacity: 1;
+					transition: 0.5s all ease-in-out;
+				}
 			}
+			.intro_wrapper {
+				width: 80%;
+				max-width: 857px;
+				min-width: 300px;
+				margin: 0 auto 100px auto;
 
-			p {
-				line-height: 1.5;
-				margin-bottom: 1.5rem;
-				span {
-					font-weight: 600;
+				transform: translateY(-40%);
+				opacity: 0;
+				transition: 0.3s all ease-in-out;
+
+				p {
+					line-height: 1.5;
+					margin-bottom: 1.5rem;
+					span {
+						font-weight: 600;
+					}
 				}
 			}
 		}

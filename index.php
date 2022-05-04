@@ -16,7 +16,9 @@ require 'partials/navbar.php';
 </header>
 <section class="intro " id="intro"  >
     <div class="container">
-        <div class="intro_content in-view" data-threshold = '1.3'>
+
+        <div class="intro_content in-view" >
+            <div class="intro_wrapper">
             <p><span>HealthCare Europe d.o.o.</span> was established in 2012 in Serbia as a daughter company of a Chinese
             memory foam production giant HealthCare Co. Ltd. Factory is placed in Ruma, Republic of Serbia,
             with more than 60.000 m² and supplies European markets, Russia, the Middle East, and the USA.
@@ -26,6 +28,8 @@ require 'partials/navbar.php';
             customer’s demand.</p>
             <p>Our broad product portfolio range consists of diverse types of mattresses, toppers, pillows, and other
             accessories.</p>
+            </div>
+           
         </div>
 
         <!-- COUNTER -->

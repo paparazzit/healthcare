@@ -34,13 +34,13 @@
                     <a href="career.php">CAREER</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">ABOUT US</a>
+                    <a href="aboutUs.php">ABOUT US</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">CONTACT</a>
+                    <a href="contact_page.php">CONTACT</a>
                 </div>
                 <div class="link">
-                    <a href="index.php">NEWS</a>
+                    <a href="news.php">NEWS</a>
                 </div>
                 <div class="link">
                     <a href="privacy_policy.php">PRIVACY POLICY</a>

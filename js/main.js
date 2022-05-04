@@ -3,8 +3,10 @@
 // LOADING AND RESIZING
 let he = 0;
 let sredine = [];
+let win_width = window.innerWidth;
 
 window.addEventListener("load", () => {
+	win_width = window.innerWidth;
 	setDefault();
 	start();
 	if (card_section) {
@@ -20,7 +22,7 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", () => {
 	setDefault();
-
+	win_width = window.innerWidth;
 	if (card_section) {
 		let card_height = 0;
 		set_cardSize();
@@ -107,7 +109,7 @@ function set_cardSize() {
 let ap_section = document.querySelectorAll(".in-view");
 
 let height;
-let width;
+let width = window.innerWidth;
 
 let cont_article_1 = document.querySelector("#count_article_1");
 let cont_article_2 = document.querySelector("#count_article_2");
@@ -153,8 +155,8 @@ function start() {
 
 let obs_options = {
 	root: null,
-	rootMargin: "-120px -50px",
-	threshold: 0.05,
+	rootMargin: "-110px -50px",
+	threshold: 0.1,
 };
 const observer = new IntersectionObserver(inView, obs_options);
 ap_section.forEach((section) => {
@@ -274,4 +276,72 @@ function pp_activate(item) {
 			cont = 0;
 		}
 	}
+}
+
+// TIMELINE
+
+let areas = document.querySelectorAll(".time_line .area");
+let bubbles = document.querySelectorAll(".text-bubble");
+let points = document.querySelectorAll(".point");
+let years = document.querySelectorAll(".year");
+let tl_section = document.querySelector("section.time_line");
+let text = "";
+let mob_text = document.querySelector(".text-area .text-bubble");
+if (areas.length > 0) {
+	console.log(areas);
+	areas.forEach((area) => {
+		area.addEventListener("click", show_text_bubble);
+	});
+	window.addEventListener("click", (e) => {
+		if (
+			e.target.classList.contains("area") ||
+			e.target.classList.contains("year")
+		) {
+			return;
+		} else {
+			remove_bubble();
+		}
+	});
+}
+
+function show_text_bubble() {
+	center_window.apply(this);
+	let bubble = this.children[0];
+	let point = this.children[1];
+	let year = this.children[2];
+
+	remove_bubble();
+	point.classList.add("active");
+	year.classList.add("active");
+	if (win_width > 550) {
+		bubble.classList.add("show");
+	} else {
+		text = bubble.innerHTML;
+
+		setTimeout(() => {
+			mob_text.classList.add("show");
+			mob_text.innerHTML = text;
+		}, 300);
+	}
+}
+
+function remove_bubble() {
+	mob_text.classList.remove("mob");
+	bubbles.forEach((blb) => {
+		blb.classList.remove("show");
+	});
+	points.forEach((pnt) => {
+		pnt.classList.remove("active");
+	});
+	years.forEach((year) => {
+		year.classList.remove("active");
+	});
+}
+
+function center_window() {
+	tl_section.scrollIntoView({
+		behavior: "smooth",
+		block: "center",
+		inline: "nearest",
+	});
 }

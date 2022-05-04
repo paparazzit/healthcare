@@ -27,6 +27,7 @@ a {
 	font-weight: 600;
 	letter-spacing: 1.4px;
 	border: none;
+	cursor: pointer;
 	&.btn_green {
 		background-color: $clr_green;
 		color: $fnt_white;
@@ -35,6 +36,20 @@ a {
 		color: $clr_green;
 		border: 2px solid $clr_green;
 		font-weight: bold;
+	}
+	&.sending {
+		background-color: $white;
+		color: $clr_green;
+		border: 2px solid $clr_green;
+	}
+	&.success {
+		color: $white;
+		background: $clr_green;
+	}
+	&.failed {
+		background-color: $white;
+		color: $clr_green;
+		border: 2px solid red;
 	}
 }
 
@@ -133,6 +148,7 @@ header.page_header {
 		display: block;
 		width: 100%;
 		object-position: center;
+
 		z-index: 0;
 		top: 0;
 		left: 0;
@@ -203,5 +219,97 @@ header.page_header {
 	}
 	&.remove {
 		display: none;
+	}
+}
+
+form.form {
+	width: 100%;
+	padding: 20px;
+	.form-group {
+		margin-bottom: 26px;
+		position: relative;
+		overflow: hidden;
+		input,
+		textarea {
+			border: none;
+			background-color: $clr_bg_lgt;
+			border-radius: 10px;
+			width: 100%;
+			font-size: 1rem;
+			color: black;
+			padding: 1em 1em;
+			font-family: $fnt_main;
+			resize: none;
+
+			&:focus {
+				outline: none;
+				border: 2px solid $clr_green;
+			}
+			&.error {
+				border: 2px solid rgba(255, 0, 0, 0.615);
+			}
+		}
+		textarea {
+			min-height: 200px;
+		}
+		.info {
+			right: 10px;
+			top: 5px;
+			transform: translateX(130%);
+			transition: 0.3s all ease-in-out;
+			position: absolute;
+			display: none;
+
+			color: red;
+			z-index: 2;
+			opacity: 0;
+			p {
+				text-align: center;
+				font-size: 0.85rem;
+			}
+			&.show {
+				display: block;
+			}
+			&.anim {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+	}
+	.buttons {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+
+		input[type="file"] {
+			display: none;
+		}
+		label {
+			flex: 0 0 50%;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			&.error {
+				border: 2px solid rgba(255, 0, 0, 0.615);
+			}
+			i {
+				margin-right: 10px;
+			}
+		}
+		button {
+			flex: 0 0 50%;
+			margin-bottom: 20px;
+			max-width: 220px;
+			flex: 0 0 50%;
+			border: 2px solid $clr_green;
+		}
+	}
+	.mail_load {
+		width: 50px;
+		height: 50px;
+		img {
+			width: 100%;
+			display: block;
+		}
 	}
 }

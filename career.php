@@ -161,14 +161,17 @@ Then visit our page:</p>
                 <div class="info">
                 <p>Message Field Error</p>
                 </div>
+              
             </div>
             <div class="buttons">
                 <div class="upload-file">
                     <input type="file" id="upload"> <label id="upload_btn" class="btn btn_outline" for="upload"><i class="fa-solid fa-display"> </i><span>Upload from a computer</span></label>
                 </div>
-                <button class="btn btn_green">SEND</button>
+                <button class="btn btn_green" id="submit_btn">SEND</button>
             </div>
-            <div class="form_info"></div>
+            <div class="form_info" id="form_info">
+                
+            </div>
         </form>
     </div>
     <div class="right">
